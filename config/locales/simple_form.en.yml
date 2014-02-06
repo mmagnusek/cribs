@@ -1,0 +1,17 @@
+en:
+  helpers:
+    submit:
+      create: "Uložit"
+      update: "Uložit zmeny"
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Prosím, upravte nasledujúce chyby:"
+  errors:
+    messages:
+      blank: "nesmie byť prázdne"
+

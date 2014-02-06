@@ -1,0 +1,26 @@
+.filters
+  h4 Filter
+  = form_tag
+    = select_tag :category, options_for_select(category_options, params[:category])
+
+.panel.panel-default
+  .panel-heading
+    h4= link_to 'Nový hlavný produkt', new_admin_product_path
+    h3 Hlavné produkty
+  table.table
+    th Názov
+    th Popis
+    th Špefifikácia
+    th Kategória
+    th
+    th
+    - @products.each do |product|
+      tr
+        td
+          = image_tag product.image.url(:thumb)
+          = product.name
+        td= product.description
+        td= product.specification
+        td= product.category.name
+        td= link_to 'Editovať', edit_admin_product_path(product)
+        td= link_to 'Zmazať', admin_product_path(product), method: :delete

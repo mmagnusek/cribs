@@ -1,0 +1,16 @@
+div class="navbar"
+  div class="navbar-inner"
+    div class="container"
+      a class='brand' href='/'
+        | CRIBS
+      ul class='nav'
+        li
+          = link_to 'Hlavné produkty', admin_products_path
+        li
+          = link_to 'Eshop produkty', admin_eshop_products_path
+        li
+          = link_to 'Kategórie', admin_categories_path
+        li
+          = link_to 'Farby', admin_colors_path
+        li
+          = link_to 'Velkosti', admin_sizes_path

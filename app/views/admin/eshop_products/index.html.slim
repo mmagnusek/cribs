@@ -1,0 +1,23 @@
+.panel.panel-default
+  .panel-heading
+    h4= link_to 'Nový produkt', new_admin_eshop_product_path
+    h3 Eshop produkty
+  table.table
+    th Produkt
+    th Farba
+    th Veľkosť
+    th Cena
+    th Sklad
+    th
+    th
+    - @products.each do |product|
+      tr
+        td
+          = image_tag product.image.url(:thumb)
+          = product.product.name
+        td= product.color.name
+        td= product.size.name
+        td= product.price
+        td= product.stock
+        td= link_to 'Editovať', edit_admin_eshop_product_path(product)
+        td= link_to 'Zmazať', admin_eshop_product_path(product), method: :delete

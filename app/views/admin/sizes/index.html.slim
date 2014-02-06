@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-heading
+    h4= link_to 'Nová veľkosť', new_admin_size_path
+    h3 Veľkosti
+  table.table
+    th Názov
+    th
+    th
+    - @sizes.each do |size|
+      tr
+        td= size.name
+        td= link_to 'Editovať', edit_admin_size_path(size)
+        td= link_to 'Zmazať', admin_size_path(size), method: :delete
+

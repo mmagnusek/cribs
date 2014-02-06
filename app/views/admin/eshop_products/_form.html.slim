@@ -1,0 +1,13 @@
+
+= simple_form_for([:admin, @product], multipart: true) do |f|
+  = f.error_notification
+  = f.association :product
+  = f.association :color
+  = f.association :size
+  = f.input :stock
+  = f.input :price
+  - if @product.image.present?
+    = image_tag @product.image.url(:small)
+  = f.input :image
+  hr
+  = f.submit nil, class: "btn btn-info"

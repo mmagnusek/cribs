@@ -1,0 +1,18 @@
+en:
+  flash:
+    product:
+      created: "Produkt bol úspešne vytvorený."
+      updated: "Produkt bol úspešne editovaný."
+      destroyed: "Produkt bol úspešne zmazaný."
+    category:
+      created: "Kategória bola úspešne vytvorená."
+      updated: "Kategória bola úspešne editovaná."
+      destroyed: "Kategória bola úspešne zmazaná."
+    color:
+      created: "Farba bola úspešne vytvorená."
+      updated: "Farba bola úspešne editovaná."
+      destroyed: "Farba bola úspešne zmazaná."
+    size:
+      created: "Veľkosť bola úspešne vytvorená."
+      updated: "Veľkosť bola úspešne editovaná."
+      destroyed: "Veľkosť bola úspešne zmazaná."

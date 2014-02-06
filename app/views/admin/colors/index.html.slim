@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-heading
+    h4= link_to 'Nová farba', new_admin_color_path
+    h3 Farby
+  table.table
+    th Názov
+    th
+    th
+    - @colors.each do |color|
+      tr
+        td= color.name
+        td= link_to 'Editovať', edit_admin_color_path(color)
+        td= link_to 'Zmazať', admin_color_path(color), method: :delete
+

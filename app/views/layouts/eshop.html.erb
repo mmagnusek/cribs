@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Leisure Magento Theme</title>
+
+<!--CSS-->
+<%= stylesheet_link_tag    "application" %>
+
+<!--Google Webfont -->
+<link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
+
+<%= javascript_include_tag "application" %>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="header_container">
+        <!--Header Starts-->
+        <header>
+            <div class="top_bar clear">
+                <!--Language Switcher Starts-->
+                <!-- <div class="language_switch"> <a class="active" href="#" title="ENGLISH">EN</a> <a href="#" title="FRENCH">FR</a> </div> -->
+                <!--Language Switcher Ends-->
+                <!--Top Links Starts-->
+                <ul class="top_links">
+                    <li><a href="#">MOJE KONTO</a></li>
+                    <li><a href="#">WISHLIST</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li class="highlight"><a href="#">SIGNUP</a></li>
+                </ul>
+                <!--Top Links Ends-->
+            </div>
+            <!--Logo Starts-->
+            <h1 class="logo">
+                <a href="leisure_index.html">
+                    <%= image_tag 'logo.png' %>
+                </a>
+             </h1>
+            <!--Logo Ends-->
+            <!--Responsive NAV-->            <div class="responsive-nav" style="display:none;">
+                <select  onchange="if(this.options[this.selectedIndex].value != ''){window.top.location.href=this.options[this.selectedIndex].value}">
+                    <option selected="" value="">Navigate...</option>
+                    <option value="leisure_index.html"> Home</option>
+                    <option value="leisure_listing.html"> -  Listing Page</option>
+                    <option value="leisure_detail.html">Product Page</option>
+                    <option value="leisure_cart.html"> -  Shopping Cart</option>
+                    <option value="leisure_checkout.html"> -  Checkout</option>
+                    <option value="leisure_contact.php">Contact</option>
+                </select>
+            </div>
+            <!--Responsive NAV-->
+            <!--Search Starts-->
+            <form class="header_search">
+                <div class="form-search">
+                    <input id="search" type="text" name="q" value="" class="input-text" autocomplete="off" placeholder="Hľadaj">
+                    <button type="submit" title="Search"></button>
+                </div>
+            </form>
+            <!--Search Ends-->
+        </header>
+        <!--Header Ends-->
+    </div>
+    <div class="navigation_container">
+        <!--Navigation Starts-->
+        <nav>
+            <ul class="primary_nav">
+
+                <% Category.all.each do |category| %>
+                    <li>
+                        <%= link_to category.name %>
+                    </li>
+                <% end %>
+                <!-- <li class="active"><a href="leisure_listing.html">Women</a></li> -->
+
+            </ul>
+            <div class="minicart"> <a href="#" class="minicart_link" > <span class="item"><b>2</b> POLOŽIEK /</span> <span class="price"><b>$69.20</b></span> </a>
+                <!-- <div class="cart_drop"> <span class="darw"></span>
+                    <ul>
+                        <li>
+                            <%= image_tag 'mini_c_item1.png' %>
+                            <a href="#">Clogs Beach/Garden Clog</a> <span class="price">$49.90</span>
+                        </li>
+                        <li><img src="images/mini_c_item2.png"><a href="#">Faded chambray shorts</a> <span class="price">$12.90</span></li>
+                        <div class="cart_bottom">
+                            <div class="subtotal_menu"><small>Subtotal:</small><big>$69.20</big></div>
+                            <a href="leisure_cart.html">Checkout</a></div>
+                    </ul>
+                </div> -->
+            </div>
+        </nav>
+        <!--Navigation Ends-->
+    </div>
+    <div class="section_container">
+        <!--Mid Section Starts-->
+        <section>
+            <!--Banner Starts-->
+            <div id="banner_section">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                          <%= image_tag 'lm_banner_1.jpg' %>
+                            <!--<div class="flex-caption">
+                     <h3>Explore the summer collection!</h3>
+              </div>-->
+                        </li>
+                        <li>
+                          <%= image_tag 'lm_banner_2.jpg' %>
+                            <!--<div class="flex-caption">
+                      <h3>Shop now!</h3>
+               </div> -->
+                        </li>
+                        <li>
+                          <%= image_tag 'lm_banner_3.jpg' %>
+                         </li>
+                    </ul>
+                </div>
+                <div class="promo_banner">
+                    <div class="home_banner">
+                        <a href="#">
+                            <%= image_tag 'promo_hb_1.jpg' %>
+                        </a>
+                    </div>
+                    <div class="home_banner">
+                        <a href="#">
+                            <%= image_tag 'promo_hb_2.jpg' %>
+                        </a>
+                    </div>
+                    <div class="home_banner">
+                        <a href="#">
+                            <%= image_tag 'promo_hb_3.jpg' %>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Banner Ends-->
+            <!--Product List Starts-->
+            <div class="products_list products_slider">
+                <h2 class="sub_title">NOVÉ PRODUKTY</h2>
+                <ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
+
+                    <% @products.each do |product| %>
+                        <%= render 'products/product_list', product: product %>
+                    <% end %>
+
+                </ul>
+            </div>
+            <!--Product List Ends-->
+            <!--Product List Starts-->
+            <div class="products_list products_slider">
+                <h2 class="sub_title">OBĽÚBENÉ PRODUKTY</h2>
+                <ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
+
+                    <% @products.each do |product| %>
+                        <%= render 'products/product_list', product: product %>
+                    <% end %>
+
+                </ul>
+            </div>
+            <!--Product List Ends-->
+            <!--Newsletter_subscribe Starts-->
+            <div class="subscribe_block">
+                <div class="find_us">
+                    <h3>Find us on</h3>
+                    <a class="twitter" href="#"></a> <a class="facebook" href="#"></a> <a class="rss" href="#"></a> </div>
+                <div class="subscribe_nl">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <small>Instant wardrobe updates, new arrivals, fashion news, don’t miss a beat – sign up to our newsletter now.</small>
+                    <form id="newsletter" method="post" action="#">
+                        <input type="text" class="input-text" value="Enter your email" title="Enter your email" id="newsletter" name="email">
+                        <button class="button" title="" type="submit"></button>
+                    </form>
+                </div>
+            </div>
+            <!--Newsletter_subscribe Ends-->
+        </section>
+        <!--Mid Section Ends-->
+    </div>
+    <div class="footer_container">
+        <!--Footer Starts-->
+        <footer>
+            <ul class="footer_links">
+                <li> <span>New Arrivals</span>
+                    <ul>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Zimmermann</a></li>
+                        <li><a href="#">Acne</a></li>
+                        <li><a href="#">Bassike</a></li>
+                        <li><a href="#">Camilla and Marc</a></li>
+                    </ul>
+                </li>
+                <li  class="seperator"> <span>Brands we sell</span>
+                    <ul>
+                        <li><a href="#">Elle</a></li>
+                        <li><a href="#">Reallxe</a></li>
+                        <li><a href="#">Fabric</a></li>
+                        <li><a href="#">Mayflower</a></li>
+                        <li><a href="#">Levis Strauss</a></li>
+                        <li><a href="#">Anzonica</a></li>
+                        <li><a href="#">Reallxe</a></li>
+                        <li><a href="#">Fabric</a></li>
+                    </ul>
+                </li>
+                <li> <span>Customer Service</span>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Order Status & Tracking</a></li>
+                        <li><a href="#">Gift Wrap Options</a></li>
+                        <li><a href="#">International Orderse</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </li>
+                <li> <span>My Account</span>
+                    <ul>
+                        <li><a href="#">My Account Information</a></li>
+                        <li><a href="#">My Password</a></li>
+                        <li><a href="#">My Order History</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">My Address Book</a></li>
+                        <li><a href="#">My Updates & Alerts</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer_customblock">
+                <div class="shipping_info"> <span>introducing </span><br>
+                    <big>FREE SHIPPING</big><br>
+                    <small>for purchases above $200</small> </div>
+                <div class="contact_info"> <big>1.800. (1.800.260.7890)</big> </div>
+            </div>
+            <address>
+            Copyright © 2012 Leisure. All Rights Reserved. <%= image_tag 'payment_info.jpg' %>
+            </address>
+        </footer>
+        <!--Footer Ends-->
+    </div>
+</div>
+</body>
+</html>
