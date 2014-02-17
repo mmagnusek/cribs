@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Leisure Magento Theme</title>
+<title>Cribs.sk</title>
 
 <!--CSS-->
 <%= stylesheet_link_tag    "application" %>
@@ -36,7 +36,7 @@
             <!--Logo Starts-->
             <h1 class="logo">
                 <a href="leisure_index.html">
-                    <%= image_tag 'logo.png' %>
+                    <%= image_tag 'logos.png' %>
                 </a>
              </h1>
             <!--Logo Ends-->
@@ -96,71 +96,9 @@
     <div class="section_container">
         <!--Mid Section Starts-->
         <section>
-            <!--Banner Starts-->
-            <div id="banner_section">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li>
-                          <%= image_tag 'lm_banner_1.jpg' %>
-                            <!--<div class="flex-caption">
-                     <h3>Explore the summer collection!</h3>
-              </div>-->
-                        </li>
-                        <li>
-                          <%= image_tag 'lm_banner_2.jpg' %>
-                            <!--<div class="flex-caption">
-                      <h3>Shop now!</h3>
-               </div> -->
-                        </li>
-                        <li>
-                          <%= image_tag 'lm_banner_3.jpg' %>
-                         </li>
-                    </ul>
-                </div>
-                <div class="promo_banner">
-                    <div class="home_banner">
-                        <a href="#">
-                            <%= image_tag 'promo_hb_1.jpg' %>
-                        </a>
-                    </div>
-                    <div class="home_banner">
-                        <a href="#">
-                            <%= image_tag 'promo_hb_2.jpg' %>
-                        </a>
-                    </div>
-                    <div class="home_banner">
-                        <a href="#">
-                            <%= image_tag 'promo_hb_3.jpg' %>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!--Banner Ends-->
-            <!--Product List Starts-->
-            <div class="products_list products_slider">
-                <h2 class="sub_title">NOVÉ PRODUKTY</h2>
-                <ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
 
-                    <% @products.each do |product| %>
-                        <%= render 'products/product_list', product: product %>
-                    <% end %>
+            <%= yield %>
 
-                </ul>
-            </div>
-            <!--Product List Ends-->
-            <!--Product List Starts-->
-            <div class="products_list products_slider">
-                <h2 class="sub_title">OBĽÚBENÉ PRODUKTY</h2>
-                <ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
-
-                    <% @products.each do |product| %>
-                        <%= render 'products/product_list', product: product %>
-                    <% end %>
-
-                </ul>
-            </div>
-            <!--Product List Ends-->
-            <!--Newsletter_subscribe Starts-->
             <div class="subscribe_block">
                 <div class="find_us">
                     <h3>Find us on</h3>
@@ -177,69 +115,6 @@
             <!--Newsletter_subscribe Ends-->
         </section>
         <!--Mid Section Ends-->
-    </div>
-    <div class="footer_container">
-        <!--Footer Starts-->
-        <footer>
-            <ul class="footer_links">
-                <li> <span>New Arrivals</span>
-                    <ul>
-                        <li><a href="#">Clothing</a></li>
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Bags</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Zimmermann</a></li>
-                        <li><a href="#">Acne</a></li>
-                        <li><a href="#">Bassike</a></li>
-                        <li><a href="#">Camilla and Marc</a></li>
-                    </ul>
-                </li>
-                <li  class="seperator"> <span>Brands we sell</span>
-                    <ul>
-                        <li><a href="#">Elle</a></li>
-                        <li><a href="#">Reallxe</a></li>
-                        <li><a href="#">Fabric</a></li>
-                        <li><a href="#">Mayflower</a></li>
-                        <li><a href="#">Levis Strauss</a></li>
-                        <li><a href="#">Anzonica</a></li>
-                        <li><a href="#">Reallxe</a></li>
-                        <li><a href="#">Fabric</a></li>
-                    </ul>
-                </li>
-                <li> <span>Customer Service</span>
-                    <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                        <li><a href="#">Payment Options</a></li>
-                        <li><a href="#">Order Status & Tracking</a></li>
-                        <li><a href="#">Gift Wrap Options</a></li>
-                        <li><a href="#">International Orderse</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </li>
-                <li> <span>My Account</span>
-                    <ul>
-                        <li><a href="#">My Account Information</a></li>
-                        <li><a href="#">My Password</a></li>
-                        <li><a href="#">My Order History</a></li>
-                        <li><a href="#">Payment Options</a></li>
-                        <li><a href="#">My Address Book</a></li>
-                        <li><a href="#">My Updates & Alerts</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="footer_customblock">
-                <div class="shipping_info"> <span>introducing </span><br>
-                    <big>FREE SHIPPING</big><br>
-                    <small>for purchases above $200</small> </div>
-                <div class="contact_info"> <big>1.800. (1.800.260.7890)</big> </div>
-            </div>
-            <address>
-            Copyright © 2012 Leisure. All Rights Reserved. <%= image_tag 'payment_info.jpg' %>
-            </address>
-        </footer>
-        <!--Footer Ends-->
     </div>
 </div>
 </body>

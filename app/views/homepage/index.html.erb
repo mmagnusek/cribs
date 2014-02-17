@@ -1,0 +1,62 @@
+<div id="banner_section">
+<div class="flexslider">
+    <ul class="slides">
+        <li>
+          <%= image_tag 'lm_banner_1.jpg' %>
+            <!--<div class="flex-caption">
+     <h3>Explore the summer collection!</h3>
+</div>-->
+        </li>
+        <li>
+          <%= image_tag 'lm_banner_2.jpg' %>
+            <!--<div class="flex-caption">
+      <h3>Shop now!</h3>
+</div> -->
+        </li>
+        <li>
+          <%= image_tag 'lm_banner_3.jpg' %>
+         </li>
+    </ul>
+</div>
+<div class="promo_banner">
+    <div class="home_banner">
+        <a href="#">
+            <%= image_tag 'promo_hb_1.jpg' %>
+        </a>
+    </div>
+    <div class="home_banner">
+        <a href="#">
+            <%= image_tag 'promo_hb_2.jpg' %>
+        </a>
+    </div>
+    <div class="home_banner">
+        <a href="#">
+            <%= image_tag 'promo_hb_3.jpg' %>
+        </a>
+    </div>
+</div>
+</div>
+<!--Banner Ends-->
+<!--Product List Starts-->
+<div class="products_list products_slider">
+<h2 class="sub_title">NOVÉ PRODUKTY</h2>
+<ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
+
+    <% @products.each do |product| %>
+        <%= render 'eshop_products/product_list', product: product %>
+    <% end %>
+
+</ul>
+</div>
+<!--Product List Ends-->
+<!--Product List Starts-->
+<div class="products_list products_slider">
+<h2 class="sub_title">OBĽÚBENÉ PRODUKTY</h2>
+<ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
+
+    <% @products.each do |product| %>
+        <%= render 'eshop_products/product_list', product: product %>
+    <% end %>
+
+</ul>
+</div>

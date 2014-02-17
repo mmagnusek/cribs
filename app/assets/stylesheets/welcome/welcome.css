@@ -1,0 +1,43 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require_self
+ */
+
+body {
+  background: url(/images/background_texture.jpg);
+  background-position: 50% 0%;
+  background-repeat: repeat-y repeat-x;
+}
+
+div#welcome {
+  margin: 0 auto;
+  margin-bottom: 150px;
+  width: 843px;
+  height: 1030px;
+  background: url(/images/welcome.png);
+}
+
+div#video {
+  position: absolute;
+  width: 843px;
+  height: 440px;
+  margin: 0 auto;
+  margin-top: 550px;
+}
+
+div#content {
+  width: 705px;
+  height: 430px;
+  margin: 0 auto;
+  margin-left: 90px;
+  margin-top: 5px;
+}
