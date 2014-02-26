@@ -24,3 +24,7 @@ select {
 .bottom-space {
   margin-bottom: 20px;
 }
+
+div.selector > span {
+  display: none;
+}

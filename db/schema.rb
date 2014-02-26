@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140201034132) do
+ActiveRecord::Schema.define(version: 20140226014543) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -55,12 +55,52 @@ ActiveRecord::Schema.define(version: 20140201034132) do
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "table_id"
   end
 
   create_table "sizes", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "tables", force: true do |t|
+    t.string "name"
+    t.string "a_uni"
+    t.string "a_xs"
+    t.string "a_s"
+    t.string "a_m"
+    t.string "a_l"
+    t.string "a_xl"
+    t.string "a_xxl"
+    t.string "b_uni"
+    t.string "b_xs"
+    t.string "b_s"
+    t.string "b_m"
+    t.string "b_l"
+    t.string "b_xl"
+    t.string "b_xxl"
+    t.string "c_uni"
+    t.string "c_xs"
+    t.string "c_s"
+    t.string "c_m"
+    t.string "c_l"
+    t.string "c_xl"
+    t.string "c_xxl"
+    t.string "d_uni"
+    t.string "d_xs"
+    t.string "d_s"
+    t.string "d_m"
+    t.string "d_l"
+    t.string "d_xl"
+    t.string "d_xxl"
+    t.string "e_uni"
+    t.string "e_xs"
+    t.string "e_s"
+    t.string "e_m"
+    t.string "e_l"
+    t.string "e_xl"
+    t.string "e_xxl"
   end
 
 end

@@ -8,6 +8,7 @@ Cribs::Application.routes.draw do
     resources :categories
     resources :colors
     resources :sizes
+    resources :tables
   end
 
   resources :homepage

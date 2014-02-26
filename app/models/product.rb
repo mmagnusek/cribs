@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
     default_url: "/images/:style/missing.png"
 
   belongs_to  :category
+  belongs_to  :table
   has_many    :eshop_products
   has_many    :sizes, through: :eshop_products
   has_many    :colors, through: :eshop_products

@@ -36,12 +36,16 @@ $(function(){
   }
 
   $('a.change_product_image').click(function(){
+    if ($(this).hasClass('actual')) { return false; }
+    $('a.actual').removeClass('actual');
+    $(this).addClass('actual');
     set_main_image($( '.' + $(this).attr('id')));
     return false;
   });
 
   $('select.select_colors').change(function(){
     var color_id = $(this).val();
+    if (color_id == '' || color_id == 'VYBRAŤ') { return false; }
     set_main_image($( '.color_' + color_id).eq(0));
     return false;
   });

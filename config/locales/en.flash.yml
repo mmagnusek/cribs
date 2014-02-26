@@ -16,3 +16,7 @@ en:
       created: "Veľkosť bola úspešne vytvorená."
       updated: "Veľkosť bola úspešne editovaná."
       destroyed: "Veľkosť bola úspešne zmazaná."
+    table:
+      created: "Tabuľka bola úspešne vytvorená."
+      updated: "Tabuľka bola úspešne editovaná."
+      destroyed: "Tabuľka bola úspešne zmazaná."

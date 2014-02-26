@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-heading
+    h4= link_to 'Nová tabuľka', new_admin_table_path
+    h3 Tabuľky
+  table.table
+    th Názov
+    th
+    th
+    - @tables.each do |table|
+      tr
+        td= table.name
+        td= link_to 'Editovať', edit_admin_table_path(table)
+        td= link_to 'Zmazať', admin_table_path(table), method: :delete
+
