@@ -1,13 +1,19 @@
 
-= simple_form_for([:admin, @product], multipart: true) do |f|
+= simple_nested_form_for([:admin, @product], multipart: true) do |f|
   = f.error_notification
   = f.association :product
   = f.association :color
   = f.association :size
   = f.input :stock
   = f.input :price
-  - if @product.image.present?
-    = image_tag @product.image.url(:small)
-  = f.input :image
+  = f.simple_fields_for :images do |image|
+    - if image.object.present? && image.object.valid?
+      = image_tag image.object.image.url(:thumb)
+      br
+    - else
+      = image.input :image, as: :file, error: false
+    br
+    = image.link_to_remove "Remove image", class: "btn btn-danger bottom-space"
+  = f.link_to_add "Add image", :images, class: "btn"
   hr
   = f.submit nil, class: "btn btn-info"

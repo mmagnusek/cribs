@@ -3,6 +3,7 @@
   = f.input :name
   = f.input :description
   = f.input :specification
+  = f.input :material
   = f.association :category
   - if @product.image.present?
     = image_tag @product.image.url(:small)

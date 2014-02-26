@@ -9,6 +9,7 @@ Version: 1.0.0
 body{
 	font-family:Arial, Helvetica, sans-serif; color:#544f4b;
   background-color: rgba(21, 21, 19, 1) !important;
+  background: url(/images/background_texture.jpg) repeat-x !important;
 }
 
 /*LAYOUT*/
@@ -38,7 +39,7 @@ header .top_links > li a{ display:block; padding:16px 20px; line-height:100%; co
 header .top_links > li.highlight a {
   color:#fff;
   text-shadow:none;
-  background-color: rgba(215, 174, 48, 1) !important;
+  background-color: #f48371 !important;
 }
 
 header h1.logo{ float:left; padding:10px 0px;}
@@ -78,11 +79,11 @@ nav .primary_nav > li > a {
   color:#fff;
 }
 nav .primary_nav > li:hover > a {
-  background-color: rgba(214, 174, 48, 1) !important;
+  background-color: #f48371 !important;
 }
 nav .primary_nav li.active > a {
   color:#fff;
-  background-color: rgba(214, 174, 48, 1) !important;
+  background-color: #f48371 !important;
 }
 nav .minicart{ float:right;margin:5px 0px 3px 0px; padding: 14px 10px 14px 40px; background:url(/images/cart_icon.png) no-repeat 7px center; position:relative; text-decoration:none;}
 nav .minicart a{ text-decoration:none;}
@@ -134,7 +135,7 @@ ul.sub_menu > li > ul{border-top: solid 1px #5f5a56; margin-top:10px;}
   clear:both;
   width:83%;
   margin-top:0px;
-  background-color: rgba(215, 174, 48, 1) !important;
+  background-color: #f48371 !important;
 }
 .products_list li:hover .pr_add{ margin-top:-32px;-moz-transition:all 0.3s ease-out 0s; -webkit-transition: all 0.3s ease-out;}
 .products_list .price_info a{ color:#a2a2a2; text-decoration:none; font-size:11px; display:inline-block; padding-top:10px;}
@@ -208,7 +209,7 @@ ul.sub_menu > li > ul{border-top: solid 1px #5f5a56; margin-top:10px;}
 .product_rightcol .product_options > ul > li label{ float:left; min-width:15%; padding:5px 0px;}
 .product_rightcol .product_options > ul > li .required{ color:#FF0000; padding-right:5px; float:left;}
 .product_rightcol .product_options > ul > li:nth-child(even) {background: #fff}
-.product_rightcol .product_options > ul > li:nth-child(odd) {background: #EAE8E8;}
+.product_rightcol .product_options > ul > li:nth-child(odd) {background: #f48371;}
 .product_rightcol .product_options > ul > li .txt_frm{}
 .product_rightcol .product_options > ul > li .txt_frm label{ clear:right; margin-bottom:10px;}
 .product_rightcol .product_options > ul > li .txt_frm input[type="text"], .product_rightcol .product_options > ul > li .txt_frm textarea{ width:50%;}
@@ -259,7 +260,7 @@ footer address{ display:inline-block; width:100%; border-top:solid 1px #d6d6d6; 
 footer address img{ float:right;}
 
 /*-----------------------------------MAIN CONTENT*/
-#main_content{ width:760px; float:right; margin-top:17px;}
+#main_content{ width:760px; margin-top:17px; margin: 17px auto;}
 /*Breadcrumb*/
 ul.breadcrumb{ padding:12px 0px; display:inline-block; width:100%;}
 ul.breadcrumb li{ padding:0px 14px; font-size:11px; text-transform:uppercase; display:inline-block; list-style:none; background:url(../images/arrow.png) no-repeat -10px -3px;}
@@ -467,14 +468,14 @@ h2.sub_title{
 .flex-caption h3{ text-transform:uppercase; font-size:22px; line-height:30px; font-weight:bold;}
 
 /*-----------------------------------COLOR THEME HERE*/
-.navigation_container, .products_list li .product_info, ul.sub_menu > li > ul > li:hover, #product_detail, .col_right .block-title, .twitter_feed{ border-bottom-color: rgba(215, 174, 48, 1);}
+.navigation_container, .products_list li .product_info, ul.sub_menu > li > ul > li:hover, #product_detail, .col_right .block-title, .twitter_feed{ border-bottom-color: #f48371;}
 header .top_links > li.highlight a,
-nav .primary_nav li.active > a, .products_list .price_info button .pr_add, .products_list_list li .price_info button .pr_add, .cart_drop .cart_bottom a{ background:#f38256;}
+nav .primary_nav li.active > a, .products_list .price_info button .pr_add, .products_list_list li .price_info button .pr_add, .cart_drop .cart_bottom a{ background:#f48371;}
 nav .minicart span b,
 footer .footer_customblock .shipping_info span, ul.breadcrumb li.active a, .product_rightcol .pr_price big, footer .footer_links li a:hover, #shopping-cart-table tr td span.pr_info, #totals-table .total, .cart_drop ul li span.price, .cart_drop .cart_bottom .subtotal_menu big, ul.simpleTabsNavigation li a.current, .side_nav li a:hover, .twitter_feed a{color:#f38256;}
-footer, ul.sub_menu, .sideNavCategories > ul, ul.sub_menu > li > ul, .checkout_tax .shipping_tax, .checkout_discount, .cart_drop, ul.simpleTabsNavigation li a.current {border-top-color: rgba(215, 174, 48, 1);}
+footer, ul.sub_menu, .sideNavCategories > ul, ul.sub_menu > li > ul, .checkout_tax .shipping_tax, .checkout_discount, .cart_drop, ul.simpleTabsNavigation li a.current {border-top-color: #f48371;}
 .flexslider .flex-direction-nav li a:hover, nav .primary_nav > li > a:hover, nav .primary_nav > li:hover > a, .product_rightcol .add_to_buttons button.add_cart, .action_buttonbar button.checkout, #shopping-cart-table tr td a.remove:hover, .sideNavCategories > ul.departments > li > a:hover, .sideNavCategories > ul.departments > li > a.active, span.highlight_text{ background-color:#f38256;}
-.products_list li:hover img, .products_list_list li:hover img{ border-color: rgba(215, 174, 48, 1); }
+.products_list li:hover img, .products_list_list li:hover img{ border-color: #f48371; }
 .flex-caption{ border-left-color:#f38256}
 
 /*-----------------------------------FONTS HERE*/

@@ -2,19 +2,38 @@
       <!--PRODUCT DETAIL STARTS-->
       <div id="product_detail">
         <!--Product Left Starts-->
-        <div class="product_leftcol"> <img src="images/pr_main.jpg">
-          <ul class="pr_gallery">
-            <li><a href="#"><img src="images/pr_gal1.jpg"></a></li>
-            <li><a href="#"><img src="images/pr_gal2.jpg"></a></li>
-            <li><a href="#"><img src="images/pr_gal3.jpg"></a></li>
+        <div class="product_leftcol">
+          <div id="main_product_image">
+            <%= link_to image_tag(@product.image.url(:large)), @product.image.url(:big), rel: :lazybox %>
+          </div>
+          <ul class="pr_gallery" style="margin-top:5px;">
+            <% @product.eshop_products_in_stock.each do |product| %>
+              <li>
+                <% product.images.each do |image| %>
+                  <a href="#" class="change_product_image" id="<%= "product_#{product.id}_image_#{image.id}" %>">
+                    <%= image_tag image.image.url(:small) %>
+                  </a>
+                <% end %>
+              </li>
+              <li class="big_images">
+                <% product.images.each do |image| %>
+                  <%= link_to image_tag(image.image.url(:large)), image.image.url(:big), rel: :lazybox,
+                    class: "hidden product_#{product.id}_image_#{image.id} color_#{product.color.id}"
+                  %>
+                <% end %>
+              </li>
+            <% end %>
           </ul>
         </div>
         <!--Product Left Ends-->
         <!--Product Right Starts-->
-        <div class="product_rightcol"> <small class="pr_type">Formal Dress</small>
+        <div class="product_rightcol"> <small class="pr_type"><%= @product.specification %></small>
           <h1>
             <%= @product.name %>
           </h1>
+          <p class="short_dc">
+            <%= @product.material %>
+          </p>
           <p class="short_dc">
             <%= @product.description %>
           <div class="pr_price">
@@ -26,32 +45,31 @@
           <div class="size_info">
             <div class="size_sel">
               <label>VEĽKOSŤ :</label>
-              <select>
+              <select class="product_select select_sizes">
                 <option>VYBRAŤ</option>
-                <option>32</option>
+                <%= options_from_products(@product.eshop_products_in_stock, :size).html_safe %>
               </select>
             </div>
             <div class="color_sel">
               <label>FARBA :</label>
-              <select>
+              <select class="product_select select_colors">
                 <option>VYBRAŤ</option>
-                <option>CORAL</option>
+                <%= options_from_products(@product.eshop_products_in_stock, :color).html_safe %>
               </select>
             </div>
           </div>
           <div class="qty_info">
             <div class="quantity">
-              <label>Quantity :</label>
-              <select>
-                <option>1</option>
-                <option>2</option>
+              <label>Množstvo :</label>
+              <select class="select_quantity">
+                <option>VYBRAŤ</option>
               </select>
             </div>
           </div>
           <div class="add_to_buttons">
-            <button onClick="parent.location='leisure_cart.html'" class="add_cart">Add to Cart</button>
+            <button onClick="parent.location='leisure_cart.html'" class="add_cart">Pridať do košíka</button>
           </div>
-          <div class="product_overview">
+          <!-- <div class="product_overview">
             <h4>Quick Overview</h4>
             <ul>
               <li>Long sleeves with single button cuffs.</li>
@@ -60,7 +78,7 @@
               <li>Front button placket.</li>
               <li>Hem is longer in back.</li>
             </ul>
-          </div>
+          </div> -->
           <!--Options-->
           <div class="product_options">
 

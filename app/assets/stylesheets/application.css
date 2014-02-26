@@ -9,7 +9,16 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ #= require reset
+ #= require base
+ #= require bootstrap_and_overrides
+ #= require flexslider
+ #= require jcarousel_tango
+ #= require responsive
+ #= require short_codes
+ #= require simpletabs
+ *= require lazybox
+ #= require styles
  */
 
 div.filters {

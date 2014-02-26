@@ -5,7 +5,7 @@
 <title>Cribs.sk</title>
 
 <!--CSS-->
-<%= stylesheet_link_tag    "application" %>
+<%= stylesheet_link_tag  "application" %>
 
 <!--Google Webfont -->
 <link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'>
@@ -14,25 +14,27 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+<%= csrf_meta_tags %>
+
 </head>
 <body>
 <div class="wrapper">
     <div class="header_container">
         <!--Header Starts-->
         <header>
-            <div class="top_bar clear">
+            <!-- <div class="top_bar clear">
                 <!--Language Switcher Starts-->
                 <!-- <div class="language_switch"> <a class="active" href="#" title="ENGLISH">EN</a> <a href="#" title="FRENCH">FR</a> </div> -->
                 <!--Language Switcher Ends-->
                 <!--Top Links Starts-->
-                <ul class="top_links">
-                    <li><a href="#">MOJE KONTO</a></li>
-                    <li><a href="#">WISHLIST</a></li>
-                    <li><a href="#">LOGIN</a></li>
-                    <li class="highlight"><a href="#">SIGNUP</a></li>
-                </ul>
+                <!-- <ul class="top_links"> -->
+                    <!-- <li><a href="#">MOJE KONTO</a></li> -->
+                    <!-- <li><a href="#">WISHLIST</a></li> -->
+                    <!-- <li><a href="#">LOGIN</a></li> -->
+                    <!-- <li class="highlight"><a href="#">SIGNUP</a></li> -->
+                <!-- </ul> -->
                 <!--Top Links Ends-->
-            </div>
+            <!-- </div> -->
             <!--Logo Starts-->
             <h1 class="logo">
                 <a href="leisure_index.html">
@@ -70,13 +72,13 @@
 
                 <% Category.all.each do |category| %>
                     <li>
-                        <%= link_to category.name %>
+                        <%= link_to category.name, category_path(category) %>
                     </li>
                 <% end %>
                 <!-- <li class="active"><a href="leisure_listing.html">Women</a></li> -->
 
             </ul>
-            <div class="minicart"> <a href="#" class="minicart_link" > <span class="item"><b>2</b> POLOŽIEK /</span> <span class="price"><b>$69.20</b></span> </a>
+            <div class="minicart"> <a href="#" class="minicart_link" > <span class="item"><b>0</b> POLOŽIEK /</span> <span class="price"><b>0 eur</b></span> </a>
                 <!-- <div class="cart_drop"> <span class="darw"></span>
                     <ul>
                         <li>

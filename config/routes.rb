@@ -10,7 +10,13 @@ Cribs::Application.routes.draw do
     resources :sizes
   end
 
-  resources :eshop_products
+  resources :homepage
+  resources :categories
+  resources :eshop_products do
+    collection do
+      get :stock_count
+    end
+  end
 
   # You can have the root of your site routed with "root"
   root 'homepage#welcome'

@@ -17,6 +17,8 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'paperclip', '~> 3.5.2'
 gem 'mysql2'
+gem 'nested_form'
+gem 'lazybox'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

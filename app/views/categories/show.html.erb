@@ -1,0 +1,60 @@
+<!--MAIN CONTENT STARTS-->
+            <div id="main_content">
+                <div class="category_banner"> <img src="/images/promo_cat_banner.jpg"/> </div>
+                <!-- <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="leisure_listing.html">Women</a></li>
+                    <li class="active"><a href="#">Shirts & Blouses</a></li>
+                </ul> -->
+                <!--Toolbar-->
+                <div class="toolbar">
+                    <div class="sortby">
+                        <label>Zoradiť podľa :</label>
+                        <select>
+                            <option>PRICE</option>
+                            <option>NAME</option>
+                        </select>
+                    </div>
+                    <!-- <div class="viewby"> -->
+                        <!-- <label>View as :</label> -->
+                        <!-- <a class="list" href="#"></a> <a class="grid" href="#"></a> </div> -->
+                    <div class="show_no">
+                        <label>Zobraziť :</label>
+                        <select>
+                            <option>12 ITEMS</option>
+                            <option>24 ITEMS</option>
+                        </select>
+                    </div>
+                </div>
+                <!--Toolbar-->
+                <!--Product List Starts-->
+                <div class="products_list products_slider">
+                    <ul>
+                        <% @category.products.each do |product| %>
+                            <%= render 'eshop_products/product_list', product: product %>
+                        <% end %>
+                    </ul>
+                </div>
+                <!--Product List Ends-->
+                <!--Toolbar-->
+                <!-- <div class="toolbar">
+                    <div class="sortby">
+                        <label>Sort by :</label>
+                        <select>
+                            <option>PRICE</option>
+                            <option>NAME</option>
+                        </select>
+                    </div>
+                    <div class="viewby">
+                        <label>View as :</label>
+                        <a class="list" href="#"></a> <a class="grid" href="#"></a> </div>
+                    <div class="show_no">
+                        <label>Show :</label>
+                        <select>
+                            <option>12 ITEMS</option>
+                            <option>24 ITEMS</option>
+                        </select>
+                    </div> -->
+                </div>
+                <!--Toolbar-->
+            </div>

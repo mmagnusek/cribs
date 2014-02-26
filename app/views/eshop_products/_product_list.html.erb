@@ -1,7 +1,5 @@
 <li>
-  <a class="product_image">
-    <%= image_tag product.image.url(:medium) %>
-  </a>
+  <%= link_to (image_tag product.image.url(:medium)), eshop_product_path(product), class: "product_image" %>
 
   <div class="product_info">
     <h3>
@@ -13,7 +11,7 @@
   </div>
 
   <div class="price_info">
-    <a href="#">+ Add to wishlist</a>
+    <!-- <a href="#">+ Add to wishlist</a> -->
     <button class="price_add" title="" type="button">
       <span class="pr_price">od $<%= product.price %></span>
       <span class="pr_add">Do košíka</span>

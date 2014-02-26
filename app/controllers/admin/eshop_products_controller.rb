@@ -44,7 +44,7 @@ class Admin::EshopProductsController < Admin::AdminController
 
   def product_params
     params.required(:eshop_product).permit(:product_id, :color_id, :size_id,
-      :stock, :price, :image)
+      :stock, :price, images_attributes: [:image, :_destroy, :id])
   end
 
 end
